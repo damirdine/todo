@@ -117,6 +117,7 @@ body{
     .container>:nth-child(4){grid-area: card4;}
     .container>:nth-child(5){grid-area: card5;}
     .container{
+        gap: 1.5% 1.5%;
         grid-template: 
         "card1 card1 card2 card5"
         "card3 card4 card4 card5";
