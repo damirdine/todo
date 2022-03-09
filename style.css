@@ -1,0 +1,85 @@
+:root{
+    /* colors primary*/
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    /* colors Neutral*/
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --white50: hsla(0, 0%, 100%,0.5);
+    --white70: hsla(0, 0%, 100%,0.7);
+    /* breakpoint media */
+    ---mobile-bp: 375px;
+    --desktop: 1440px;
+    /* font size */
+    --font-size-title: 22px;
+}
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500&display=swap');
+
+body{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.45px;
+}
+.author-name{
+    font-weight: 500;
+}
+.card__title{
+    font-weight: 600;
+    font-size: var(--font-size-title);
+}
+/* iniatial */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* author grid area declaration */
+.author-pic{grid-area: author-pic}
+.author-info{grid-area: author-info}
+
+/* mise en form */
+
+.container{
+    display: grid;
+    gap: 35px;
+    justify-items: center;
+    margin: 15% 6.8%;
+
+}
+.card{
+    display: grid;
+    justify-items: start;
+    gap: 23px;
+    width:100%;
+    padding: 32px;
+    border-radius: 12.5px;
+}
+/* card color change */
+.card--violet{
+    background-color: var(--moderate-violet);
+    color: var(--white);
+}
+/* end card color change*/
+
+.card__author{
+    display: grid;
+    gap: 25px;
+    align-items: center;
+    grid-template:
+            "author-pic author-info" auto
+}
+.author-pic{
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid var(--white50);
+}
+.author-grade{
+    color: var(--white50);
+}
+.card__content{
+    color: var(--white70);
+}
