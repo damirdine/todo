@@ -15,7 +15,7 @@
     ---mobile-bp: 375px;
     --desktop: 1440px;
     /* font size */
-    --font-size-title: 15px;
+    --font-size-title: 18.5px;
 }
 /* Typography */
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500&display=swap');
@@ -25,6 +25,7 @@ body{
     font-weight: 500;
     line-height: 1.4;
     letter-spacing: 0.45px;
+    font-size: 13px;
 }
 .author-name{
     font-weight: 600;
@@ -57,8 +58,8 @@ body{
 }
 .card{
     display: grid;
+    gap: 13px;
     justify-items: start;
-    gap: 23px;
     width:100%;
     padding: 32px;
     border-radius: 12.5px;
@@ -98,7 +99,8 @@ body{
     gap: 25px;
     align-items: center;
     grid-template:
-            "author-pic author-info" auto
+            "author-pic author-info" auto;
+    padding-bottom: 5px;
 }
 .author-pic{
     width: 100%;
@@ -119,6 +121,5 @@ body{
     }
     .card{
         display: grid;
-        gap: 0px;
     }
 }
