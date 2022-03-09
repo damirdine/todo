@@ -47,14 +47,16 @@ body{
 
 /* mise en form */
 body{
+    display: grid;
     background-color: var(--light-grayish-blue);
+    align-content: center;
+    min-height: 100vh;
 }
 .container{
     display: grid;
     gap: 35px;
     justify-items: center;
-    margin: 15% 6.8%;
-
+    margin: 1% 6.8%;
 }
 .card{
     display: grid;
