@@ -9,23 +9,25 @@
     --light-grayish-blue: hsl(210, 46%, 95%);
     --white50: hsla(0, 0%, 100%,0.5);
     --white70: hsla(0, 0%, 100%,0.7);
+    --dark50: hsla(219, 29%, 14%,0.5);
+    --dark70: hsla(219, 29%, 14%,0.70);
     /* breakpoint media */
     ---mobile-bp: 375px;
     --desktop: 1440px;
     /* font size */
-    --font-size-title: 22px;
+    --font-size-title: 15px;
 }
 /* Typography */
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500&display=swap');
 
 body{
     font-family: 'Barlow Semi Condensed', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.4;
     letter-spacing: 0.45px;
 }
 .author-name{
-    font-weight: 500;
+    font-weight: 600;
 }
 .card__title{
     font-weight: 600;
@@ -38,11 +40,14 @@ body{
     box-sizing: border-box;
 }
 /* author grid area declaration */
+
 .author-pic{grid-area: author-pic}
 .author-info{grid-area: author-info}
 
 /* mise en form */
-
+body{
+    background-color: var(--light-grayish-blue);
+}
 .container{
     display: grid;
     gap: 35px;
@@ -63,6 +68,29 @@ body{
     background-color: var(--moderate-violet);
     color: var(--white);
 }
+
+.card--gray{
+    background-color: var(--very-dark-grayish-blue);
+    color: var(--white);
+}
+.card--white{
+    background-color: var(--white);
+    color: var(--very-dark-blackish-blue);
+}
+.card--dark-gray{
+    background-color: var(--very-dark-blackish-blue);
+    color: var(--white);
+}
+.author-grade,
+.card__content{
+    color: var(--light-gray);
+}
+.txt-dark50{
+    color: var(--dark50);
+}
+.txt-dark70{
+    color: var(--dark70);
+}
 /* end card color change*/
 
 .card__author{
@@ -77,9 +105,20 @@ body{
     border-radius: 50%;
     border: 3px solid var(--white50);
 }
-.author-grade{
-    color: var(--white50);
-}
-.card__content{
-    color: var(--white70);
+
+@media screen and (min-width:845px){
+    .container>:first-child{grid-area: card1;}
+    .container>:nth-child(2){grid-area: card2;}
+    .container>:nth-child(3){grid-area: card3;}
+    .container>:nth-child(4){grid-area: card4;}
+    .container>:nth-child(5){grid-area: card5;}
+    .container{
+        grid-template: 
+        "card1 card1 card2 card5"
+        "card3 card4 card4 card5";
+    }
+    .card{
+        display: grid;
+        gap: 0px;
+    }
 }
